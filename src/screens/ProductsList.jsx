@@ -1,13 +1,14 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import {useNavigation} from '@react-navigation/native'
 
-const SettingsScreen = () => {
+export default function ProductsList({}) {
   const navigation = useNavigation();
 
-  const navigate = screen  => {
+  const navigate = screen  => { // Funtion that receives a screen to redirect to it.
     navigation.navigate(screen)
   }
+
   return (
     <View > 
         <Text style={styles.text}>LÁCTEOS</Text>
@@ -18,8 +19,6 @@ const SettingsScreen = () => {
     </View>
   )
 }
-
-export default SettingsScreen;
 
 const styles = StyleSheet.create({
     text: {
